@@ -5,9 +5,9 @@ FROM node:16-alpine as build
 WORKDIR /app
 
 # Copy package.json and package-lock.json to work directory
-COPY package*.json ./
+COPY package.json .
 
-RUN rm -rf node_modules package-lock.json
+# RUN rm -rf node_modules package-lock.json
 # Install dependencies
 RUN npm install
 
@@ -15,9 +15,6 @@ RUN npm install
 COPY . .
 
 EXPOSE 5173
-
-# Build the app
-RUN npm run build
 
 # Command to run the app
 CMD ["npm", "run", "dev"]

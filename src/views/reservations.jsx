@@ -7,7 +7,7 @@ const Reservations = () => {
   const [reservationDetails, setReservationDetails] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const baseurl = 'http://localhost:8005/reservations/';
+  const baseurl = 'http://apigateway:8005/reservations/';
 
   const navigate = useNavigate();
 
