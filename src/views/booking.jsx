@@ -21,7 +21,7 @@ export default function Booking() {
     const [endDate, setEndDate] = useState("");
 
     // Reservation endpoint url
-    const url = "http://apigateway:8005/reservations/create/";
+    const url = "http://localhost:8005/reservations/create/";
 
     //navigate
     const navigate = useNavigate();
